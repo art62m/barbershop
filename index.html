@@ -5,16 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
     <h1 class="visually-hidden">Барбершоп Borodinski</h1>
     <header class="site-header">
         <a class="site-header__logo" href="#">
-            <img class="site-header__logo-image" src="img/Logo.png" alt="Логотип borodinski">
+            <img class="site-header__logo-image" src="img/logotype-mobile.png" width="226" height="30" alt="Логотип borodinski">
         </a>
 
         <nav class="main-nav">
+            <div class="main-nav__wrapper">
             <ul class="main-nav__list site-list">
                 <li class="site-list__item">
                     <a class="site-list__link" href="#">Главная</a>
@@ -37,13 +40,14 @@
                     <a class="user-list__link" href="#">Войти</a>
                 </li>
             </ul>
+        </div>
         </nav>
     </header>
 
     <main class="site-main">        
         <section class="stats">
             <header class="stats__header">
-                <h2 class="stats__title">Статистика Барбершопа</h2>
+                <h2 class="stats__title visually-hidden" >Статистика Барбершопа</h2>
                 <b class="stats__slogan">Стрижка у нас это выгодно!</b>
                 <p class="stats__intro">Мужская стрижка требует точного подхода. Обратимся к статистике:</p>
             </header>

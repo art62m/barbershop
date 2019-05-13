@@ -7,7 +7,7 @@ const cleanCSS = require('gulp-clean-css');
 const browserSync = require('browser-sync').create();
 
 function lessCompilation() {
-    return gulp.src('less/**/*.less')
+    return gulp.src('./less/style.less')
     .pipe(sourcemaps.init())
     .pipe(less())
     .pipe(autoprefixer({
@@ -15,9 +15,9 @@ function lessCompilation() {
         cascade: false
     }))
     .pipe(sourcemaps.write('.'))    
-    .pipe(cleanCSS({
+  /*  .pipe(cleanCSS({
         level: 2
-    }))
+    }))*/
     .pipe(gulp.dest('css'))
     .pipe(browserSync.stream());
 };
@@ -25,17 +25,12 @@ function lessCompilation() {
 function watch1() {
     browserSync.init({
        server: {
-           baseDir: "./"
+           baseDir: "."
        } 
     });
     gulp.watch('less/**/*.less', lessCompilation);
     gulp.watch('*.html').on('change', browserSync.reload);
 };
 
-function clean() {
-    return delete(['css/*'])
-}
-
 gulp.task('less', lessCompilation);
 gulp.task('watch', watch1);
-gulp.task('build', gulp.series(clean, less));
