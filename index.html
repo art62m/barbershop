@@ -16,11 +16,14 @@
             <img class="site-header__logo-image" src="img/logotype-mobile.png" width="226" height="30" alt="Логотип borodinski">
         </a>
 
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+            <button class="main-nav__toggle" type="button">
+                <span class="visually-hidden">Открыть меню</span>
+            </button>
             <div class="main-nav__wrapper">
             <ul class="main-nav__list site-list">
-                <li class="site-list__item">
-                    <a class="site-list__link" href="#">Главная</a>
+                <li class="site-list__item site-list__item--active">
+                    <a class="site-list__link">Главная</a>
                 </li>
                 <li class="site-list__item">
                     <a class="site-list__link" href="#">Наши работы</a>
@@ -37,7 +40,12 @@
             </ul>
             <ul class="main-nav__list user-list">
                 <li class="user-list__item">
-                    <a class="user-list__link" href="#">Войти</a>
+                    <a class="user-list__link" href="#">
+                        <svg class="user-list__link-icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 16 16"><polygon points="0 7 7.01 7 7.01 4.06 10.96 8.01 7.01 11.91 7.01 9.06 0 9.02 0 7"/>
+                        <polygon points="7.01 0 7.01 2 14.03 2 14.03 13.99 7.01 13.99 7.01 16 16 16 16 0 7.01 0"/></svg>
+                        Войти
+                    </a>
                 </li>
             </ul>
         </div>
@@ -50,6 +58,9 @@
                 <h2 class="stats__title visually-hidden" >Статистика Барбершопа</h2>
                 <b class="stats__slogan">Стрижка у нас это выгодно!</b>
                 <p class="stats__intro">Мужская стрижка требует точного подхода. Обратимся к статистике:</p>
+                <small class="stats__legend stats__legend--top">
+                    <sup>*</sup>- приведённые данные ложь
+                </small>
             </header>
             <table class="stats__table">
                 <tr>
@@ -85,7 +96,7 @@
                     </td>
                 </tr> 
             </table>
-            <small class="stats__legend">
+            <small class="stats__legend stats__legend--bottom">
                 <sup>*</sup>- приведённые данные ложь
             </small>
         </section>
@@ -217,5 +228,6 @@
             <a href="#" class="copyright__button button">HTML Academy</a>
         </div>
     </footer>
+    <script src="js/open-mobile-menu.js"></script>
 </body>
 </html>

@@ -1,0 +1,117 @@
+.user-list {
+    background-color: #6a4d38;
+
+    &__link{
+        position: relative;
+        display: block;
+        padding: 17px 21px;
+        padding-left: 48px;
+
+        line-height: 18px;
+        color: #ffffff;
+        text-decoration: none;
+
+    }
+
+    &__link-icon {
+        position: absolute;
+        top: 17px;
+        left: 21px;
+
+        width: 16px;
+        height: 16px;
+
+        opacity: 0.3;
+
+        polygon {
+            fill: #ffffff;
+        }
+    }
+
+    @media (min-width: @tablet-width) {
+        & {            
+                      
+            background-color: transparent;
+            
+        }
+
+        &__link {
+            width: 50px;
+            height: 70px;;
+            padding: 0;
+            font-size: 0;
+
+            &:hover .user-list__link-icon{
+                opacity: 1;
+
+                polygon {
+                    fill: #826558;
+                }
+            }
+
+            &:active .user-list__link-icon{
+                opacity: 0.3;
+
+                polygon {
+                    fill: #ffffff;
+                }
+            }
+        }
+
+        &__link-icon {
+            top: 29px;
+            left: 2px;
+        }
+    }
+
+    @media (min-width: @desktop-width) {
+        & {
+            width: auto;
+            max-width: 160px;
+        }
+
+        &__link {
+            position: relative;
+
+            width: auto;
+            height: auto;
+
+            padding-top: 25px;
+            padding-bottom: 23px;
+            padding-right: 22px;
+            padding-left: 57px;
+
+            
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+
+            &:hover {
+                color: #000000;
+                background-color: #ffffff;
+
+            }
+
+            &:active {
+                color: rgba(0, 0, 0, 0.3);
+            }
+
+            &:hover .user-list__link-icon{
+                opacity: 0.3;
+
+                polygon {
+                    fill: #000000;
+                }
+            }
+
+            &:active .user-list__link-icon{
+                opacity: 0.1;
+            }
+        }   
+          
+        &__link-icon {
+            left: 27px;
+        }
+    }
+}
